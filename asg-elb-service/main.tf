@@ -49,7 +49,7 @@ data "aws_availability_zones" "all" {}
 # ---------------------------------------------------------------------------------------------------------------------
 
 resource "aws_launch_configuration" "webserver_example" {
-  image_id        = "${data.aws_ami.ubuntu.id}"
+  image_id        = "${data.aws_ami.UbuntuDockerBaseImage.id}"
   instance_type   = "${var.instance_type}"
   security_groups = ["${aws_security_group.asg.id}"]
 
