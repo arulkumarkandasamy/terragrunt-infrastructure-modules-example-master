@@ -49,7 +49,7 @@ data "aws_availability_zones" "all" {}
 # ---------------------------------------------------------------------------------------------------------------------
 
 resource "aws_launch_configuration" "webserver_example" {
-  image_id        = "${data.aws_ami.UbuntuDockerBaseImage.id}"
+  image_id        = "${data.aws_ami.Ubuntu.id}"
   instance_type   = "${var.instance_type}"
   security_groups = ["${aws_security_group.asg.id}"]
 
@@ -64,7 +64,7 @@ resource "aws_launch_configuration" "webserver_example" {
   }
 }
 
-data "aws_ami" "UbuntuDockerBaseImage" {
+data "aws_ami" "Ubuntu" {
   most_recent = true
   owners      = ["661519780295"] # Canonical
 
