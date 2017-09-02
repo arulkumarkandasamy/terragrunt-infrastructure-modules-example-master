@@ -83,10 +83,10 @@ data "aws_ami" "UbuntuDockerBaseImage" {
     values = ["machine"]
   }
 
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
-  }
+#  filter {
+#    name   = "name"
+#    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
+#  }
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
